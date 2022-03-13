@@ -2,3 +2,5 @@ name: Resentials
 version: '${project.version}'
 main: me.applerex.Applerex
 api-version: 1.18
+depend:
+  - LuckPerms
