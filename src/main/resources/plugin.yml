@@ -2,6 +2,8 @@ name: Resentials
 version: '${project.version}'
 main: me.applerex.Applerex
 api-version: 1.18
+depend:
+  - LuckPerms
 commands:
   gmc:
     description: Sets player gamemode to creative
@@ -10,4 +12,8 @@ commands:
   gms:
     description: Sets player gamemode to survival
     permission: op
+    usage: /<command>
+  heal:
+    permission: heal.use
+    description: heals the player
     usage: /<command>
