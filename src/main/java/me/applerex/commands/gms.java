@@ -8,18 +8,19 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-public class gmc implements CommandExecutor {
+public class gms implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-        if (!(sender instanceof Player)) {
-            sender.sendMessage(ChatColor.RED + "Sorry, only players can use this command");
+        if(!(sender instanceof Player)) {
+            sender.sendMessage(ChatColor.RED + "Sorry, only players can use that command");
             return true;
         }
 
         Player player = (Player) sender;
-        if(command.getName().equalsIgnoreCase("gmc")) {
-            player.setGameMode(GameMode.CREATIVE);
-            player.sendMessage(ChatColor.GOLD + "Gamemode was set to Creative");
+
+        if(command.getName().equalsIgnoreCase("gms")) {
+            player.setGameMode(GameMode.SURVIVAL);
+            player.sendMessage(ChatColor.GOLD + "Gamemode was set to Survival");
             return true;
         }
 
